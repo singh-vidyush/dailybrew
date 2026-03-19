@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Daily Brew | Artisan Coffee &amp; Cozy Spaces</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#753413",
+                        "inverse-primary": "#e7bdb1",
+                        "on-primary-fixed-variant": "#5d4037",
+                        "outline-variant": "#d4c3be",
+                        "on-primary-fixed": "#2c160e",
+                        "tertiary-fixed": "#d3e9cc",
+                        "secondary-container": "#ffa278",
+                        "primary": "#442a22",
+                        "primary-fixed-dim": "#e7bdb1",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#394b37",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#0f1f0e",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-container": "#f0eee9",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1b1c19",
+                        "surface-variant": "#e4e2dd",
+                        "surface": "#fbf9f4",
+                        "tertiary-fixed-dim": "#b7ccb1",
+                        "on-tertiary-container": "#a7bca1",
+                        "surface-dim": "#dbdad5",
+                        "on-secondary-fixed": "#360f00",
+                        "on-primary-container": "#d4ada1",
+                        "outline": "#827470",
+                        "surface-bright": "#fbf9f4",
+                        "tertiary": "#243522",
+                        "tertiary-container": "#3a4c37",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb596",
+                        "on-secondary-container": "#783615",
+                        "primary-fixed": "#ffdbd0",
+                        "primary-container": "#5d4037",
+                        "surface-container-high": "#eae8e3",
+                        "surface-container-low": "#f5f3ee",
+                        "inverse-surface": "#30312e",
+                        "background": "#fbf9f4",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#77574d",
+                        "surface-container-highest": "#e4e2dd",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1b1c19",
+                        "secondary": "#924a28",
+                        "on-surface-variant": "#504441",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 24px 32px -12px rgba(27, 28, 25, 0.06);
+        }
+
+        .glass-nav {
+            background-color: rgba(251, 249, 244, 0.8);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+    <!-- TopNavBar (Shared Component) -->
+    <header class="fixed top-0 z-50 w-full glass-nav">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
+            <div class="text-2xl font-headline italic text-primary tracking-tight">The Daily Brew</div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a class="text-primary font-bold border-b-2 border-primary/40 pb-1 font-label text-sm tracking-wide"
+                    href="#menu">Menu</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm tracking-wide"
+                    href="#about">About</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm tracking-wide"
+                    href="#gallery">Gallery</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm tracking-wide"
+                    href="#reviews">Reviews</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm tracking-wide"
+                    href="visit.html">Location</a>
+            </nav>
+            <button
+                class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-label text-sm font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 active:scale-95">
+                Visit Us
+            </button>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Cozy cafe interior with warm lighting" class="w-full h-full object-cover"
+                    data-alt="Warm sunlit cafe interior with steam rising from coffee"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVpQxOY_cK8kMLb5KQUvVJh_d5XnOWRu-cuTzDOQ7tWFZU-ZwLTOUCs44pScbtp1MoC7_42IveA14Xx50Ukmi3WbEk7Ri2wFBeFgyR_HwN_Ip3wBY5nzXc2qignDVssBj6CWIYH-Cu3ElmyuX8fcrTiPztdPWHL4YtVfZvTzfqZO6hziL-CX-b6WEWx8omjT7Nb8ow0079OP_pLs4mqwETuGAaMrHljzwnzueIv26avWb6v3g4_0x7ByJG21ioMvkmOzJU29XLM-k" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+                <div class="max-w-2xl space-y-5 mt-14">
+                    <h1 class="font-headline text-6xl md:text-8xl text-white leading-[1.1] font-medium">
+                        Where Every <span class="italic">Sip</span> Feels Like Home
+                    </h1>
+                    <p class="text-white/90 text-xl md:text-2xl font-body leading-relaxed max-w-xl">
+                        Experience the perfect blend of premium artisan coffee and a warm, inviting atmosphere designed
+                        for your comfort.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a class="bg-primary text-on-primary px-8 py-4 rounded-md font-label font-bold text-center transition-all hover:bg-primary-container hover:text-on-primary-container active:scale-95"
+                            href="#menu">
+                            View Menu
+                        </a>
+                        <a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-md font-label font-bold text-center transition-all hover:bg-white/20 active:scale-95"
+                            href="#location">
+                            Visit Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="py-32 bg-surface" id="about">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden editorial-shadow">
+                        <img alt="Barista crafting a pour over coffee" class="w-full h-full object-cover"
+                            data-alt="Barista pouring water over coffee grounds precisely"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY6e7BGw5xlERy0HIgEQ92Q0rqRFR1RLo5huMQ6fbO_5eNos8CJkEvZC6PNOT-mrg2ossBFxH2wkM_TY7I7MYqSTPNoP6EwaREQWNKZgi-MsofKZTK88upGcPVvbKKmwLrcPiP7NtoRTWMsBD_LTqonhg6okYExXtXS_9G79Z5kNSjVwWal3r4h2RR4jUwygZxvVXbjLh9-34oILR5BqsAe1HgwlIfe4HaDsw3Pfc800kTcqdfHvrXOEm7zSda5ZlI8bl1O53dl8U" />
+                    </div>
+                    <div
+                        class="absolute -bottom-12 -right-12 hidden lg:block w-64 h-64 bg-surface-container-low rounded-xl p-8 editorial-shadow">
+                        <p class="font-headline italic text-primary text-xl leading-snug">
+                            "A third place between work and home where community thrives."
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <span class="text-secondary font-label font-bold tracking-widest uppercase text-xs">Our
+                            Journey</span>
+                        <h2 class="font-headline text-5xl text-primary leading-tight">The Art of the Everyday Brew</h2>
+                        <p class="text-on-surface-variant text-lg leading-relaxed">
+                            Founded on the belief that coffee is more than just a morning ritual—it's a moment of pause.
+                            Our journey began in a small roastery with a single mission: to provide locally sourced,
+                            meticulously crafted coffee to our neighbors.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+                        <div class="space-y-3">
+                            <span class="material-symbols-outlined text-tertiary text-3xl">eco</span>
+                            <h3 class="font-label font-bold text-sm text-primary">Sustainably Sourced</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <span class="material-symbols-outlined text-tertiary text-3xl">fire_hydrant</span>
+                            <h3 class="font-label font-bold text-sm text-primary">Expertly Roasted</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <span class="material-symbols-outlined text-tertiary text-3xl">groups</span>
+                            <h3 class="font-label font-bold text-sm text-primary">Community Driven</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Items -->
+        <section class="py-32 bg-surface-container-low" id="menu">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div class="max-w-xl space-y-4">
+                        <span class="text-secondary font-label font-bold tracking-widest uppercase text-xs">The
+                            Collection</span>
+                        <h2 class="font-headline text-5xl text-primary">Signature Flavors</h2>
+                    </div>
+                    <a class="text-primary font-label font-bold border-b border-outline-variant/40 hover:border-primary transition-all pb-1"
+                        href="#">
+                        Discover Full Menu
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Item 1 -->
+                    <div
+                        class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="aspect-square overflow-hidden">
+                            <img alt="Oat Milk Latte"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Frothy oat milk latte in a ceramic mug"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kp3bV85px5goVmgpWDN3OmpXdUOfCVId86jxF5-cQV0Qk4XL_lwmAWY3DuV6rUEvbhok0v8IQ6LXoFs_MFfI9xjJwjfnZioDWxwl1IHv-xkdvqsreU1jmiCYxZp0tlmN-dVumbx_6YmLliimBM78JgI9FvTEMIAd0jBirsSKLx_l9AAeGwUfWSwdRdIsKOp6FxSRJU-f1fPLfSFcAnyx6axQHItlfaEWpckKYzSx-u4ZUe1a6M0odD9gdwC4LRVPENkHuGSobok" />
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-headline text-xl text-primary font-bold">Oat Milk Latte</h3>
+                                <span class="text-secondary font-bold">$5.50</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm font-body line-clamp-2">Smooth espresso blended
+                                with creamy, sustainable oat milk.</p>
+                            <button
+                                class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label text-sm font-bold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 active:scale-95">
+                                Quick Order
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="aspect-square overflow-hidden">
+                            <img alt="Sourdough Avocado Toast"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Artisanal avocado toast with seeds and radish"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ajb8Sz02vf3XAHl8kkQk5M6qOSgwP03kbXk4Un8rsenlRnTvRjR1kNWFesc89ZLOgoBxCWMCaQFvpXK22Z-eCqLMZT-_abmUn6Iu3UqsN56GyX9HA0z8cxqOh1qJbWGZxa8IB5yUhKIG_8nBB-VOnxOs8LX4KLKemJVvKgSxKSs_KHJ5NsPqDzlrEUTlR_t3crSZ_1HCASXdCnJTiM5xVRweEodvymNIm6iAIz8gCMqlxN1IO7qMvAJrhgX_35WL5TgvoDzUIpM" />
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-headline text-xl text-primary font-bold">Avocado Toast</h3>
+                                <span class="text-secondary font-bold">$12.00</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm font-body line-clamp-2">Locally baked sourdough
+                                topped with smashed avocado and chili flakes.</p>
+                            <button
+                                class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label text-sm font-bold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 active:scale-95">
+                                Quick Order
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="aspect-square overflow-hidden">
+                            <img alt="Almond Croissant"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Golden flaky almond croissant on a plate"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfDY8K76k76hpzu7kr1i51oDJeUAhF5lxRf4-y_vWRDzs68R1QymdgDlqJF3eAeTbd8prX4mZ7l1DiRmZ4lIiSlNkTFov07LQjtyXNMs8tBiiCB6jbrKdqO2DQNZSggF1Bc_9763MuVnuZ_vi6JKmYsoPpS3E3zG8ki724LrMYliNMIo2QHuzetIYwnsD9X-Wy35EMmfQmKWXcKoLoM50XgaY82gP7_RYcEskX2SFS6ySkTPc80kDZboMnuMf0kvpzll2fjnjnOU8" />
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-headline text-xl text-primary font-bold">Almond Croissant</h3>
+                                <span class="text-secondary font-bold">$4.75</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm font-body line-clamp-2">Flaky layers of butter
+                                pastry filled with sweet almond frangipane.</p>
+                            <button
+                                class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label text-sm font-bold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 active:scale-95">
+                                Quick Order
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div
+                        class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="aspect-square overflow-hidden">
+                            <img alt="Signature Cold Brew"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Glass of cold brew coffee with clear ice"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQV7dkABZElHX6WpAYtLs-HfmHGtJUMtAYqhgkTzQl8qFnE5N1MUfi4qp06Yrz6RNrUD1t9RqdGxxxDfx8jCHiChdWnqlkk0N0u1Up8ViGnyBcmwkcCm_uGlztg_2muQ7BGATpJG5tlPq2b1JvBkaJELS5YMSlB4MZYZ02cN4Bd7RYOgeJZ6oJdYjt8DW_XZkjfT0ib8gO4YCANtRDVxTftrkFrI-IOURmlTEtfsNsJ0tXIPETfKTrYvYL6tEkAjn-M2zB-Sja7W0" />
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-headline text-xl text-primary font-bold">Signature Cold Brew</h3>
+                                <span class="text-secondary font-bold">$6.00</span>
+                            </div>
+                            <p class="text-on-surface-variant text-sm font-body line-clamp-2">Steeped for 18 hours for a
+                                bold, smooth, and naturally sweet finish.</p>
+                            <button
+                                class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label text-sm font-bold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 active:scale-95">
+                                Quick Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us -->
+        <section class="py-32 bg-surface">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div class="space-y-4 text-center">
+                        <div
+                            class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-secondary text-3xl">restaurant</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary font-bold">Fresh Ingredients</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Sourced from local farms to ensure every bite
+                            is peak quality.</p>
+                    </div>
+                    <div class="space-y-4 text-center">
+                        <div
+                            class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-secondary text-3xl">chair</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary font-bold">Cozy Ambience</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Thoughtfully designed corners for deep work
+                            or quiet relaxation.</p>
+                    </div>
+                    <div class="space-y-4 text-center">
+                        <div
+                            class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-secondary text-3xl">timer</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary font-bold">Fast Service</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Quality never waits. Our expert team ensures
+                            you're on your way quickly.</p>
+                    </div>
+                    <div class="space-y-4 text-center">
+                        <div
+                            class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary font-bold">Affordable Pricing</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Everyday luxury that fits comfortably into
+                            your lifestyle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Bento Grid -->
+        <section class="py-32 bg-surface-container" id="gallery">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px]">
+                    <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-xl group">
+                        <img alt="Cafe interior"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Spacious cafe interior with wooden tables and plants"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDDgeExAgA2eECjbnUMWx4xfY5hh41K7TQp3_6jVE_heuzhBBBEVVFTL5sw8HWN6BwaJxSzusiTW7YOesygjTAGqc2darp935MfwPWk3zEE1QJ1LcfpnmZU7j_B0F1CnHgoaUVtnpmd2lIo9d-iAFJXEw4fimmf-iCodctFBvJcrYXmWFXoXlOG52Toy4xogA9tCYICrMEj0-PrqePjZiZuhlPahR85PhpfB4SwgXQeFqNzdWsaD1FWf1cgAkQMYv96uQ2q_d8JGo" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <span class="text-white font-headline text-2xl italic">The Main Hall</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-1 md:row-span-1 relative overflow-hidden rounded-xl group">
+                        <img alt="Latte Art"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Close up of intricate swan latte art"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wCVEfzyakIV_8ZkSZA7kMNQhKlvk2Pv3i9vah1imljF0S7803vWIiikFNzNflxumYflbh7RpsL3M4o6xSxjni521zEYB_4QBDO9rrdTf5pB8nwJXUaHyfuaSVLfaBfHXFBJKnjClt8EVNCXHvqpPdmhMVpVluKD90z-K_fiRyeeXsoo78cfT8F9O52FoRNynwG4UJ5QVSHrUtv757IjtyUWG3NnqSq_jSvE3pfNTmaaB6zO4OU1G081l05A79lFwt5IX3gIKgg8" />
+                    </div>
+                    <div class="md:col-span-1 md:row-span-2 relative overflow-hidden rounded-xl group">
+                        <img alt="Coffee Beans"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="High quality roasted coffee beans being sorted"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuClRnTAlmH_sL0t_svUuDXerMDaDPcPQpN4tCCQn23BtYcaVeNtUsuJEnaO2ILW-EPepZ2yhiHJeWco-XbdWFZ-PbUJqCG9YgWEexmxxwFbgMkY_1cik_tEgsQVSg-uJ8a0QSnqU2-taoIxFl-qeDBgYbaE4hYVct40UYNU4SjKT5ZCDkroF4RUK3nET_hhsWuT_gBwNqtlqUX9DaK526R2W7_VL9wAYDzYU0UEx-jgH29gR2gP7cejxnZY7LsfA8pjFdPnnfFVgCo" />
+                    </div>
+                    <div class="md:col-span-1 md:row-span-1 relative overflow-hidden rounded-xl group">
+                        <img alt="Breakfast spread"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A beautiful breakfast spread with croissants and coffee"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWJ00BcEifrEIGwqjDnL8timTYdy0Q0GoaJZmBVs_H62zTdnvDUzK2UU5XIe2D2zivgnOLDQJaN1lUKl2ZhptBVFznqcHAEKyiFAYY6PDn3QU0W4ZXtO1Pepa3xP_lqqs0vykvFvDKS9yRHelYzSxYMAO2UeJl-R0IZiUsHTlaN6HJPLuxfAVzVDehReD9GpjsOIloA4s7_zveMGqvKEaUuW1xWc7-1dvu-zEvknBpP8aY70TuNpkLW85hCrR_EYm0XzxVlp-O9cM" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Customer Reviews -->
+        <section class="py-32 bg-surface" id="reviews">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-16 space-y-4">
+                    <span
+                        class="text-secondary font-label font-bold tracking-widest uppercase text-xs">Testimonials</span>
+                    <h2 class="font-headline text-5xl text-primary">Voices from Our Community</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-surface-container-low p-10 rounded-xl space-y-6 editorial-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full overflow-hidden">
+                                <img alt="Sarah M." class="w-full h-full object-cover"
+                                    data-alt="Portrait of a smiling young woman"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYoELJt0JPfgUQ54lglFGBBo-42KsrtalIU0Ns4I6EFUdjRQyul6aKFLviy-ZXGrP1RId40GeLUB8FTdmmRb7AKpjEkxYmMIt76a-pPNgTXQGJKokNprPSH6FqMEsq2VAe3B8N8oMA2s2mHgZz6O615SIh1ZFIy7mm-_uB1xR06RlICbA0vUdRpMw4ogn55bzer8CqSiutZcCb-vKPYnQ4sEaYfldnCxc9l3QD8DpWc4KTRBuEnydh8M4k3ua2T0VIv9uaCuYnOhQ" />
+                            </div>
+                            <div>
+                                <h4 class="font-headline text-lg font-bold text-primary">Sarah M.</h4>
+                                <div class="flex text-secondary text-sm">
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-on-surface-variant italic leading-relaxed">
+                            "The most peaceful spot in the city. The latte art is incredible and the staff always makes
+                            you feel like a regular."
+                        </p>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="bg-surface-container-low p-10 rounded-xl space-y-6 editorial-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full overflow-hidden">
+                                <img alt="James K." class="w-full h-full object-cover"
+                                    data-alt="Portrait of a man with glasses"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGKc9L_f2Mqqy5OV_SpuZuCJfsYYsogzfLVo0enUd5UEzX0xk-oxKBzw8hS2Bz_M7VeHJAEA2_afB8JbiyD7CocM66h9g9rbuunBStzjneXXpkD5eVc6iVQSzXtxUON3hfq77vFqtmvm9n_TJD7-l8Sp-YvB0E0P7sFFcGQHte6-MB_s8xteJa13l5cO-oyUypnoj2crKxUCZDSc1oYwSPr3oBbK2RDcU2g-LIIqrDcG2bXo9ZWhcbfVfytFZALZbwaDZUPPwKHJk" />
+                            </div>
+                            <div>
+                                <h4 class="font-headline text-lg font-bold text-primary">James K.</h4>
+                                <div class="flex text-secondary text-sm">
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-on-surface-variant italic leading-relaxed">
+                            "Perfect for getting work done. Great wifi and even better bagels. I spend most of my
+                            Tuesday mornings here."
+                        </p>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="bg-surface-container-low p-10 rounded-xl space-y-6 editorial-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full overflow-hidden">
+                                <img alt="Elena R." class="w-full h-full object-cover"
+                                    data-alt="Portrait of a woman with a warm smile"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcxEvlUvLM42eEJGZ9XgWb9nqSWCLjzSNnxY8pZTIAlQkNIDgf0oHuv_ZD0KCI-4lBmy0iQlltlxRUJX90-BtB951YDSFSeZOTbDwJ6qH8qahYEt6yy024fHeZaI08joJgeTG_EmCU3KJtEx0yq6DuERCemImB_UK9Z2Z5w7WCbI8PLxcmqqvrjcRS2v_jJPe44q0h5RSzjZ8qLownUhMbJmSy8B0UTS7UxKuSJUguVSmT1OL3zMY2ExLkacKTxCFw3IsVtLcqO1w" />
+                            </div>
+                            <div>
+                                <h4 class="font-headline text-lg font-bold text-primary">Elena R.</h4>
+                                <div class="flex text-secondary text-sm">
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined fill"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-on-surface-variant italic leading-relaxed">
+                            "Love the vibe and the sustainability focus. A neighborhood gem that truly cares about
+                            quality and the environment."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer class="bg-surface-container-low py-12 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="space-y-6">
+                <div class="text-xl font-headline italic text-primary">The Daily Brew</div>
+                <p class="text-on-surface-variant text-sm leading-relaxed max-w-xs">
+                    Crafting premium artisan coffee and memorable experiences in the heart of the city since 2018.
+                </p>
+                <div class="flex gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">public</span>
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">alternate_email</span>
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">location_on</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h5 class="font-label font-bold text-primary text-sm uppercase tracking-wider">Explore</h5>
+                    <nav class="flex flex-col gap-2">
+                        <a class="text-on-surface-variant hover:text-secondary transition-colors text-sm"
+                            href="#menu">Menu</a>
+                        <a class="text-on-surface-variant hover:text-secondary transition-colors text-sm"
+                            href="#about">About</a>
+                        <a class="text-on-surface-variant hover:text-secondary transition-colors text-sm"
+                            href="#gallery">Gallery</a>
+                        <a class="text-on-surface-variant hover:text-secondary transition-colors text-sm"
+                            href="#reviews">Reviews</a>
+                    </nav>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label font-bold text-primary text-sm uppercase tracking-wider">Utility</h5>
+                    <nav class="flex flex-col gap-2">
+                        <a class="text-on-surface-variant hover:text-secondary transition-colors text-sm"
+                            href="#location">Location</a>
+                        <a class="text-on-surface-variant hover:text-secondary transition-colors text-sm"
+                            href="#">Privacy Policy</a>
+                        <a class="text-on-surface-variant hover:text-secondary transition-colors text-sm"
+                            href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h5 class="font-label font-bold text-primary text-sm uppercase tracking-wider">Visit Our Studio</h5>
+                <p class="text-on-surface-variant text-sm">
+                    124 Artisan Ave, Coffee District<br />
+                    Mon - Fri: 7:00am - 7:00pm<br />
+                    Sat - Sun: 8:00am - 8:00pm
+                </p>
+                <form class="relative group">
+                    <input
+                        class="w-full bg-surface border-none border-b border-outline-variant/40 focus:border-primary focus:ring-0 text-sm py-3 transition-all"
+                        placeholder="Join our newsletter" type="email" />
+                    <button class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-primary"
+                        type="submit">arrow_forward</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-outline-variant/10 text-center">
+            <p class="text-on-surface-variant text-xs">© 2024 The Daily Brew. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

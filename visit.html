@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#fbf9f4",
+              "tertiary-container": "#3a4c37",
+              "primary": "#442a22",
+              "surface-dim": "#dbdad5",
+              "secondary-container": "#ffa278",
+              "surface-container-low": "#f5f3ee",
+              "outline-variant": "#d4c3be",
+              "surface-container": "#f0eee9",
+              "inverse-on-surface": "#f2f1ec",
+              "on-secondary-container": "#783615",
+              "error": "#ba1a1a",
+              "surface-container-high": "#eae8e3",
+              "primary-fixed-dim": "#e7bdb1",
+              "inverse-surface": "#30312e",
+              "on-error": "#ffffff",
+              "surface-variant": "#e4e2dd",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#827470",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#ffdbd0",
+              "tertiary-fixed-dim": "#b7ccb1",
+              "on-tertiary-fixed-variant": "#394b37",
+              "on-secondary-fixed-variant": "#753413",
+              "secondary-fixed": "#ffdbcd",
+              "on-secondary-fixed": "#360f00",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#ffb596",
+              "on-primary-container": "#d4ada1",
+              "on-tertiary-fixed": "#0f1f0e",
+              "secondary": "#924a28",
+              "surface-bright": "#fbf9f4",
+              "on-tertiary-container": "#a7bca1",
+              "surface-container-highest": "#e4e2dd",
+              "background": "#fbf9f4",
+              "on-background": "#1b1c19",
+              "on-primary-fixed": "#2c160e",
+              "on-surface-variant": "#504441",
+              "inverse-primary": "#e7bdb1",
+              "on-primary-fixed-variant": "#5d4037",
+              "tertiary": "#243522",
+              "primary-container": "#5d4037",
+              "tertiary-fixed": "#d3e9cc",
+              "on-surface": "#1b1c19",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-tint": "#77574d",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        font-size: 20px;
+      }
+      .glass-nav {
+        background: rgba(251, 249, 244, 0.8);
+        backdrop-filter: blur(16px);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav shadow-[0_4px_20px_rgba(27,28,25,0.06)]">
+<nav class="flex justify-between items-center px-8 md:px-12 max-w-7xl mx-auto py-6">
+<div class="text-2xl font-headline italic text-primary">The Daily Brew</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#1b1c19] opacity-70 font-manrope hover:text-secondary hover:opacity-100 transition-all duration-300" href="home.html">Home</a>
+<a class="text-[#1b1c19] opacity-70 font-manrope hover:text-secondary hover:opacity-100 transition-all duration-300" href="menu.html">Menu</a>
+<a class="text-primary font-bold border-b border-outline-variant pb-1 hover:text-secondary transition-all duration-300" href="visit.html">Visit Us</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-label text-sm tracking-wide hover:opacity-90 transition-all active:scale-95">Order Now</button>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Cozy cafe interior with warm lighting" class="w-full h-full object-cover" data-alt="Cozy boutique cafe interior with sunlight streaming through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNvydREyfg7aJNzLDdBSEPFS5gUC6YyN10mWawQZ8fpdDAjtmScXZuuCJeLyQB2ANtJ3U82QovIdj-oB086ZNVcPz7L7pzXZPhkD63x34g5RPX6qIleVXhazRsDLaExWlq-zAFPNJrk3hG85_sSC0AaZkgWtjfnDeVv1uDzIOynxMFku29eBrveFQIRapFBLyHYA4BLwGrE-niusTrFmSe2KyunqV9_wNPe_Ib279chl0-PNPlUOLQ6ekH5KqeQWxpT9_0zG9KMOA"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary/80"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h1 class="font-headline text-5xl md:text-7xl text-surface italic mb-4">The Daily Brew</h1>
+<p class="font-body text-xl md:text-2xl text-surface-variant font-light tracking-wide">Where Every Sip Feels Like Home</p>
+</div>
+</section>
+<!-- Visit Details Grid -->
+<section class="max-w-7xl mx-auto px-8 md:px-12 py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+<!-- Left Column: Address & Contact -->
+<div class="lg:col-span-5 space-y-16">
+<div>
+<h2 class="font-headline text-4xl text-primary mb-8 italic">Find Us</h2>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="location_on">location_on</span>
+<div>
+<h3 class="font-headline text-xl text-primary">Location</h3>
+<p class="text-on-surface-variant mt-1">124 Artisan Ave,<br/>Coffee District, CA 90210</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="schedule">schedule</span>
+<div>
+<h3 class="font-headline text-xl text-primary">Hours</h3>
+<ul class="text-on-surface-variant mt-1 space-y-1">
+<li class="flex justify-between gap-8"><span>Mon — Fri</span> <span class="font-medium text-on-surface">07:00 – 19:00</span></li>
+<li class="flex justify-between gap-8"><span>Saturday</span> <span class="font-medium text-on-surface">08:00 – 20:00</span></li>
+<li class="flex justify-between gap-8"><span>Sunday</span> <span class="font-medium text-on-surface">08:00 – 17:00</span></li>
+</ul>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="call">call</span>
+<div>
+<h3 class="font-headline text-xl text-primary">Say Hello</h3>
+<p class="text-on-surface-variant mt-1">(555) 234-5678</p>
+<p class="text-on-surface-variant">hello@dailybrew.cafe</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-[0_8px_32px_rgba(27,28,25,0.08)] bg-surface-container-high">
+<img alt="Stylized map of the coffee district" class="w-full h-full object-cover grayscale opacity-60" data-alt="Stylized minimal map showing the local coffee district neighborhood" data-location="Coffee District" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8FM-3kfaKzTq0LmF3Zoj22ehFhIBYkxOYw4q0qVhisvrO8bD-sZiE9KVHgPvCAlLSYg4TChkG_SoE3rY4rbiESW4KAdZ3v2TDF0xdQx0Rl6nTr2s8wZoOqxPJMwhu4HXW--uCgWXdxF7iMn2nZqsrBNO914Y9-SizZ6qvow5nlqUe4JoyUxsov0jO1pvlSRB6oA3ga0a2axQVRj8c13z6WzKzxW3JpRtlaA50ePey6X4NLjyDNOL6ZTDcAYIDn9um1kX5Fqymo_w"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-surface-container-lowest p-4 rounded-full shadow-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="pin_drop" style="font-variation-settings: 'FILL' 1;">pin_drop</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Contact Form -->
+<div class="lg:col-span-7 bg-surface-container p-8 md:p-12 rounded-xl">
+<h2 class="font-headline text-4xl text-primary mb-2 italic">Send a Note</h2>
+<p class="text-on-surface-variant mb-10">Have questions about our blends or planning a visit? We'd love to hear from you.</p>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group">
+<label class="block text-sm font-label text-on-surface-variant mb-2" for="name">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-outline-variant/50" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative group">
+<label class="block text-sm font-label text-on-surface-variant mb-2" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-outline-variant/50" id="email" placeholder="hello@example.com" type="email"/>
+</div>
+</div>
+<div class="relative">
+<label class="block text-sm font-label text-on-surface-variant mb-2" for="message">How can we help?</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-outline-variant/50 resize-none" id="message" placeholder="Tell us about your event or inquiry..." rows="4"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-md font-label text-md tracking-wider hover:bg-primary-container transition-all active:scale-[0.98]" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- FAQ Section (Extra Section) -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-4xl mx-auto px-8">
+<div class="text-center mb-16">
+<span class="text-secondary font-label text-xs uppercase tracking-[0.2em] font-bold">Frequently Asked</span>
+<h2 class="font-headline text-4xl text-primary mt-4 italic">Good to Know</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item -->
+<div class="bg-surface-container-lowest p-6 rounded-lg">
+<button class="w-full flex justify-between items-center text-left group">
+<h3 class="font-headline text-xl text-primary">Do you take reservations?</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="add">add</span>
+</button>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                            While we mainly operate on a walk-in basis to maintain a cozy, flowing atmosphere, we do offer limited table bookings for groups of 6 or more during weekdays.
+                        </div>
+</div>
+<!-- FAQ Item -->
+<div class="bg-surface-container-lowest p-6 rounded-lg">
+<button class="w-full flex justify-between items-center text-left group">
+<h3 class="font-headline text-xl text-primary">Are you pet-friendly?</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="add">add</span>
+</button>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                            Absolutely. We have a dedicated shaded patio area where your furry friends are always welcome. We even have "Puppy Lattes" available on the house!
+                        </div>
+</div>
+<!-- FAQ Item -->
+<div class="bg-surface-container-lowest p-6 rounded-lg">
+<button class="w-full flex justify-between items-center text-left group">
+<h3 class="font-headline text-xl text-primary">Can I host a private event?</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="add">add</span>
+</button>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                            Yes, our "Bean Room" is available for private bookings, workshops, and intimate celebrations. Please use the contact form above to inquire about availability and rates.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="max-w-7xl mx-auto px-8 md:px-12 py-24">
+<div class="relative rounded-2xl overflow-hidden bg-primary-container p-12 md:p-20 text-center">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="Abstract coffee beans pattern" class="w-full h-full object-cover" data-alt="Close up detail of roasted organic coffee beans texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0xrvTYW0MFm2fNRx0oNEBw2oiRn5dJTkl9dIWHknOXUJ7xl4opDg1EGinrpwGlroVk45jfw0a3qfxesd3VkI1Va0UBiA3scPQ30YdjK-vCpPPsLAc0d6DyhfqU-3ZK027I38e2pl4sV-VBLrPvMnDny-VNsNrx3HL242n5qAZreck-KuuJwjMK0mJ8NStQ2wBpVh0mvv6cbULL2rW1ggiwVVBRP3QAsJxxZU3hsoSRoA9bkoHduymww_JYFVHX5x-PtkIvART2Ek"/>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-headline text-4xl text-on-primary-container mb-6 italic">Stay in the Loop</h2>
+<p class="text-surface-variant font-light text-lg mb-10">Join our newsletter for exclusive tasting invites, seasonal menu launches, and artisanal brewing tips.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<input class="bg-surface-container-lowest text-on-surface px-6 py-4 rounded-md focus:ring-2 focus:ring-secondary outline-none md:w-80 border-none" placeholder="Your email address" type="email"/>
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-md font-label tracking-wide hover:opacity-95 transition-all">Subscribe</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low pt-16 pb-8 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-end px-12 max-w-7xl mx-auto gap-8">
+<div class="w-full md:w-auto text-left">
+<div class="text-xl font-headline italic text-primary mb-4">The Daily Brew</div>
+<p class="text-on-surface-variant text-sm max-w-xs leading-relaxed">Crafting artisanal moments since 2018. Your neighborhood sanctuary for the perfect cup.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-label">
+<a class="text-[#1b1c19] opacity-60 hover:opacity-100 hover:text-secondary transition-opacity" href="#">Privacy Policy</a>
+<a class="text-[#1b1c19] opacity-60 hover:opacity-100 hover:text-secondary transition-opacity" href="#">Terms of Service</a>
+<a class="text-[#1b1c19] opacity-60 hover:opacity-100 hover:text-secondary transition-opacity" href="#">Accessibility</a>
+<a class="text-[#1b1c19] opacity-60 hover:opacity-100 hover:text-secondary transition-opacity" href="#">Contact Us</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 mt-12 pt-8 border-t border-outline-variant/20">
+<p class="text-xs font-label text-on-surface-variant opacity-60">© 2024 The Daily Brew. A Digital Atelier Experience.</p>
+</div>
+</footer>
+</body></html>

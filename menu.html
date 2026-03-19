@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Daily Brew | Interactive Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#5d4037",
+                        "surface-variant": "#e4e2dd",
+                        "surface-container-high": "#eae8e3",
+                        "primary-fixed-dim": "#e7bdb1",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-container-highest": "#e4e2dd",
+                        "outline-variant": "#d4c3be",
+                        "tertiary-fixed-dim": "#b7ccb1",
+                        "surface": "#fbf9f4",
+                        "secondary": "#924a28",
+                        "secondary-container": "#ffa278",
+                        "on-secondary-container": "#783615",
+                        "on-tertiary-container": "#a7bca1",
+                        "on-primary-container": "#d4ada1",
+                        "primary": "#442a22",
+                        "surface-container": "#f0eee9",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#360f00",
+                        "inverse-surface": "#30312e",
+                        "tertiary-container": "#3a4c37",
+                        "surface-dim": "#dbdad5",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fbf9f4",
+                        "tertiary-fixed": "#d3e9cc",
+                        "on-primary-fixed": "#2c160e",
+                        "tertiary": "#243522",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#77574d",
+                        "primary-container": "#5d4037",
+                        "background": "#fbf9f4",
+                        "secondary-fixed-dim": "#ffb596",
+                        "secondary-fixed": "#ffdbcd",
+                        "inverse-primary": "#e7bdb1",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#1b1c19",
+                        "outline": "#827470",
+                        "on-tertiary-fixed-variant": "#394b37",
+                        "on-surface": "#1b1c19",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-fixed": "#ffdbd0",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#504441",
+                        "on-tertiary-fixed": "#0f1f0e",
+                        "on-secondary-fixed-variant": "#753413"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary/30">
+<!-- Promo Banner -->
+<div class="bg-primary text-on-primary py-3 px-4 text-center overflow-hidden sticky top-0 z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-center gap-4">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="font-label text-sm tracking-widest font-bold">FLAT 20% OFF ON COMBOS TODAY</p>
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md sticky top-12 z-40 transition-all duration-300">
+<nav class="flex justify-between items-center w-full px-8 max-w-7xl mx-auto h-20">
+<div class="text-2xl font-headline italic text-primary font-bold">The Daily Brew</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label text-sm" href="#">Offers</a>
+<a class="text-primary font-bold border-b-2 border-secondary pb-1 font-label text-sm" href="#">Menu</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label text-sm" href="#">Location</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label text-sm" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-variant/50 rounded-full transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="p-2 hover:bg-surface-variant/50 rounded-full transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col md:flex-row gap-8">
+<!-- SideNavBar / Category Navigation -->
+<aside class="hidden md:flex flex-col py-8 px-4 gap-4 bg-surface-container-low h-fit sticky top-36 w-64 rounded-xl">
+<div class="mb-4">
+<h2 class="text-xl font-headline font-bold text-primary">Menu Categories</h2>
+<p class="text-sm text-on-surface-variant font-body">Curated Selection</p>
+</div>
+<nav class="flex flex-col gap-2">
+<button class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-secondary bg-surface-variant/30 hover:translate-x-1 transition-transform duration-200 text-left">
+<span class="material-symbols-outlined" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-body text-md">Today's Special</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-variant/10 hover:translate-x-1 transition-transform duration-200 text-left">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-body text-md">Meals</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-variant/10 hover:translate-x-1 transition-transform duration-200 text-left">
+<span class="material-symbols-outlined" data-icon="lunch_dining">lunch_dining</span>
+<span class="font-body text-md">Burgers</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-variant/10 hover:translate-x-1 transition-transform duration-200 text-left">
+<span class="material-symbols-outlined" data-icon="ramen_dining">ramen_dining</span>
+<span class="font-body text-md">Chinese</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-variant/10 hover:translate-x-1 transition-transform duration-200 text-left">
+<span class="material-symbols-outlined" data-icon="local_cafe">local_cafe</span>
+<span class="font-body text-md">Beverages</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-variant/10 hover:translate-x-1 transition-transform duration-200 text-left">
+<span class="material-symbols-outlined" data-icon="icecream">icecream</span>
+<span class="font-body text-md">Desserts</span>
+</button>
+</nav>
+<button class="mt-8 bg-secondary text-on-secondary px-6 py-3 rounded-lg font-bold hover:bg-secondary/90 transition-colors active:scale-95 shadow-md">
+                View Cart
+            </button>
+</aside>
+<!-- Mobile Horizontal Nav -->
+<div class="md:hidden flex gap-4 overflow-x-auto hide-scrollbar py-2 mb-4">
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-secondary text-on-secondary font-bold text-sm">Today's Special</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm">Meals</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm">Burgers</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm">Chinese</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm">Beverages</button>
+</div>
+<!-- Food Items Canvas -->
+<div class="flex-1">
+<div class="mb-10 relative">
+<h1 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-2">Today's Special</h1>
+<div class="w-24 h-1 bg-secondary rounded-full"></div>
+</div>
+<!-- Grid: Custom Bento-style & Editorial Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Large Featured Card -->
+<div class="lg:col-span-2 group relative bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row items-center border-none transition-all duration-300 hover:shadow-xl hover:shadow-on-surface/5">
+<div class="md:w-1/2 h-72 md:h-full relative overflow-hidden">
+<img alt="Artisanal Latte Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of artisanal latte with heart art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxRfjxYHK0F89hCI8lJPb1rwTxuFq8ZlxFdAgt3OpUGevODcifLpPS3JttLHX9j-eFDfQs-oUr7yZrSkKvNKveawUaaQWjbsMW-9fWMKgWncKe0dr2W4ntmnoy5YV5lopeDLoPjVF6Xu3hQT4mOX5psOIRrnq5qRq8DqEhDp43krRHk4C4NiISzzj3dYhflULYGNtOfbR0v3KLG_9OOLbhNFiwBbkX2rW2BFw6jgqdc3k1xc-eCasfJNeSpMvs29-91zkgmQ2O1tc"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed-variant px-3 py-1 rounded-full text-xs font-bold font-label uppercase tracking-wider">New Arrival</span>
+</div>
+</div>
+<div class="md:w-1/2 p-8 md:p-12 space-y-4">
+<h3 class="text-3xl font-headline font-bold text-primary italic">Velvet Mocha Bloom</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">A delicate blend of Ethiopian Yirgacheffe and Belgian 70% dark chocolate, steamed with velvety oat milk and a hint of lavender.</p>
+<div class="flex items-center justify-between pt-4">
+<span class="text-2xl font-bold font-headline text-secondary">$6.50</span>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label font-bold hover:translate-y-[-2px] transition-all active:scale-95">Add to List</button>
+</div>
+</div>
+</div>
+<!-- Standard Grid Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-lg transition-all border-none">
+<div class="h-64 overflow-hidden relative">
+<img alt="Classic Sourdough Toast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Golden brown sourdough toast with avocado and egg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA80GNeF3yZaDOb_MHtHbn3MigDHCQ0gJWmR2nB3stxGpjvq36XQ0F96f7pS4v4mSGNfiI7a4TVehRXZuj4dRpBUjXlS0uDWEzVJhkXJcJh_kShBjKfftaNTNrHDcRYX8z8kuqZOlfbgWfkLkItA77s6an2uWaM66F_y4TpE4Cg8OeTDvfs_0Rz-PoaRq-0vdOb-AUDCb4vwEmZdm4bpAnK9EXyypEGMuaX2kug3OEYEQAwOn4PtxivI3_sPdwdgxR-7jlEBVOx7x0"/>
+<div class="absolute bottom-0 right-0 p-4">
+<div class="bg-surface-bright/90 backdrop-blur-sm px-4 py-2 rounded-tl-xl text-primary font-bold font-headline">$14.00</div>
+</div>
+</div>
+<div class="p-6 space-y-2">
+<h4 class="text-xl font-headline font-bold text-primary">Atelier Avocado Toast</h4>
+<p class="text-on-surface-variant text-sm font-body">Smashed Hass avocado, micro-greens, chili oil, and a 6-minute organic egg on toasted sourdough.</p>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-outline-variant/30 text-primary font-label font-bold py-3 rounded-lg hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-sm">add</span> Add to List
+                        </button>
+</div>
+</div>
+<!-- Standard Grid Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-lg transition-all border-none">
+<div class="h-64 overflow-hidden relative">
+<img alt="Espresso Martini Cupcake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Gourmet coffee flavored cupcake with dark chocolate curls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC15VZxLZBYsmMTpKzi8a7WQbp43dCSIBs9v_OQeRyaZfm7KscdmrRWvo4Hv3DOUfHGBO9VgCq4ZrjjxvaPuwm220FQnlz0PhjwIYjvmjZburedCW35iALGNnb0evEx3wOBIMEMLbssCpY6daXm2WUK5KrjL9HB_IQ_L3Wa8VbJbf-68-xIUC_zRyNHSmwpbbz_GaLveBts3aPDzfTrmLpmor-E58XNOlk-Sz9EBv0zqP5wmNurVGZjdmZzigoHNJRIgd-3iaPNzsE"/>
+<div class="absolute bottom-0 right-0 p-4">
+<div class="bg-surface-bright/90 backdrop-blur-sm px-4 py-2 rounded-tl-xl text-primary font-bold font-headline">$5.25</div>
+</div>
+</div>
+<div class="p-6 space-y-2">
+<h4 class="text-xl font-headline font-bold text-primary">Midnight Brew Cupcake</h4>
+<p class="text-on-surface-variant text-sm font-body">Double-shot espresso sponge, mascarpone frosting, and hand-shaved Ecuadorian dark chocolate.</p>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-outline-variant/30 text-primary font-label font-bold py-3 rounded-lg hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-sm">add</span> Add to List
+                        </button>
+</div>
+</div>
+<!-- Standard Grid Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-lg transition-all border-none">
+<div class="h-64 overflow-hidden relative">
+<img alt="Brioche Burger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Juicy gourmet burger with caramelized onions and brioche bun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1uVzjiJt7oQA2rI7K6HF1Z_nNVwIaRyKaW-YJEXV319XFmzpYUSW3gIbT-5JJfEPygWG0IJMNtzIfmlAcGVloYOGd19ZS1KN-MhEIhFrSRcrgA2zzNCIAty0r_ItA3NPf1hk5TRN4RD94KGhwCgdhp-w1dK8EiQqssalwwdju1WzFruCBNh2BIUs0h85cP094Dy-a1pEmDvNsYkGLIKJn0X4p1MC6C2xeCAbJz7DCanBKLfVxjxOhlVSM2k8I7qXyFhTO7-v6gQ4"/>
+<div class="absolute bottom-0 right-0 p-4">
+<div class="bg-surface-bright/90 backdrop-blur-sm px-4 py-2 rounded-tl-xl text-primary font-bold font-headline">$16.50</div>
+</div>
+</div>
+<div class="p-6 space-y-2">
+<h4 class="text-xl font-headline font-bold text-primary">The Truffle Brasserie Burger</h4>
+<p class="text-on-surface-variant text-sm font-body">Wagyu beef patty, truffle aioli, balsamic caramelized onions, and aged gruyère on a toasted brioche bun.</p>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-outline-variant/30 text-primary font-label font-bold py-3 rounded-lg hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-sm">add</span> Add to List
+                        </button>
+</div>
+</div>
+<!-- Standard Grid Item 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-lg transition-all border-none">
+<div class="h-64 overflow-hidden relative">
+<img alt="Iced Cascara Tea" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Tall glass of amber colored iced tea with dried fruit garnishes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb2G6e2CevMtQPwSCuiR1kxhcSVuNE0_ZkdrDxxbxK01OLnxbVluM-UgQKVo0l5PD9DVPmVbko2MgxZy7x6X7PXWoj5sf9pfXQV4g0i15u6AOe5kByO_knu_63xJ9ULMw9iAKBlX9VO_u4Tkq_yp59M9si_oI7KohCcP_hXTphefgIw-y-HjeFmXADxlfLA4B6mStCJ4LuYSre-ydtHQM4jM2HEkyIbzf6QVWFZv1y7KuQy73MlNzLxBIPlT9NNU6w-kwmdvo1e3g"/>
+<div class="absolute bottom-0 right-0 p-4">
+<div class="bg-surface-bright/90 backdrop-blur-sm px-4 py-2 rounded-tl-xl text-primary font-bold font-headline">$6.00</div>
+</div>
+</div>
+<div class="p-6 space-y-2">
+<h4 class="text-xl font-headline font-bold text-primary">Ruby Cascara Spritz</h4>
+<p class="text-on-surface-variant text-sm font-body">Sparkling infusion of dried coffee cherries, hibiscus, and orange peel. Refreshingly bright and tart.</p>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-outline-variant/30 text-primary font-label font-bold py-3 rounded-lg hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-sm">add</span> Add to List
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Cart / Side List Panel -->
+</main>
+<!-- Footer -->
+<footer class="mt-24 bg-surface-container-highest">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-headline italic text-primary font-bold">The Daily Brew</div>
+<p class="text-sm font-body text-on-surface-variant">© 2024 The Daily Brew. Crafted for the Editorial Epicurean.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-body" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-body" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-sm font-body" href="#">Contact Us</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-secondary hover:text-on-secondary transition-all">
+<span class="material-symbols-outlined text-xl">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-secondary hover:text-on-secondary transition-all">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>
